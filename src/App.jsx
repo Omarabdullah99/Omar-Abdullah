@@ -1,8 +1,8 @@
 
 import AboutCopy from './Component/About'
-import About from './Component/AboutMe'
 import Intro from './Component/Intro'
 import Navbar from './Component/Navbar'
+import Project from './Component/Project'
 import Skill from './Component/Skill'
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     <Intro  />
     <AboutCopy />
     <Skill  />
+    <Project />
     </div>
   )
 }
