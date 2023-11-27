@@ -1,7 +1,9 @@
 
+import AboutCopy from './Component/About'
 import About from './Component/AboutMe'
 import Intro from './Component/Intro'
 import Navbar from './Component/Navbar'
+import Skill from './Component/Skill'
 
 function App() {
 
@@ -10,7 +12,8 @@ function App() {
     <div>
     <Navbar />
     <Intro  />
-    <About />
+    <AboutCopy />
+    <Skill  />
     </div>
   )
 }

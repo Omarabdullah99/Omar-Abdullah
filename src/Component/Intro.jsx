@@ -1,5 +1,5 @@
 import "./intro.css";
-import Me from "../assets/profile3.jpeg"
+import Me from "../assets/profilebright.png"
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import {  FaLinkedinIn,FaGithub,FaFacebook,FaInstagram } from "react-icons/fa";
 

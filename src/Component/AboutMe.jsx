@@ -5,13 +5,14 @@ import resume from "../assets/ResumeofOmarAbdullah(Web Developer)_.pdf";
 
 const About = () => {
   return (
-    <div className="a">
-      <div className="a-left">
+    <div className="a my-20">
+     <div className="a-left">
         <div className="a-card bg"></div>
         <div className="a-card">
           <img src={aboutimage} alt="" className="a-img" />
         </div>
-      </div>
+  </div> 
+  
       <div className="a-right">
         <h1 className="a-title text-3xl font-bold">About Me</h1>
         <p>
