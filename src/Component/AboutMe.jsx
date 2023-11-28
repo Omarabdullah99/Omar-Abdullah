@@ -33,7 +33,7 @@ const About = () => {
           expressjs, nonsql databases like mongo-db, authentication mongoose
         </p>
 
-        <div className="flex items-center text-xl bg-black text-white w-56 py-3 shadow-xl  rounded-lg gap-5 justify-center mt-3">
+        <div className="flex items-center text-sm bg-black text-white w-56 py-3 shadow-xl  rounded-lg gap-5 justify-center mt-3">
           <i className="cvicon">
             <CiViewList />
           </i>

@@ -1,5 +1,7 @@
 
 import AboutCopy from './Component/About'
+import Contact from './Component/Contact'
+import Footer from './Component/Footer'
 import Intro from './Component/Intro'
 import Navbar from './Component/Navbar'
 import Project from './Component/Project'
@@ -15,6 +17,8 @@ function App() {
     <AboutCopy />
     <Skill  />
     <Project />
+    <Contact />
+    <Footer />
     </div>
   )
 }

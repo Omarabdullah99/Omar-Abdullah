@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import "./project.css";
 import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
