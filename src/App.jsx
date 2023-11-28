@@ -13,13 +13,23 @@ function App() {
   return (
     <div>
     <Navbar />
-    <Intro  />
-    <AboutCopy />
-    <Skill  />
-    <Project />
-    <Contact />
-    <Footer />
+    <div id="home">
+      <Intro />
     </div>
+    <div id="about">
+      <AboutCopy />
+    </div>
+    <div id="skills">
+      <Skill />
+    </div>
+    <div id="projects">
+      <Project />
+    </div>
+    <div id="contact">
+      <Contact />
+    </div>
+    <Footer />
+  </div>
   )
 }
 

@@ -1,26 +1,49 @@
-/* eslint-disable no-unused-vars */
 // Navbar.js
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleScroll = () => {
+    // Set isSticky to true when the user scrolls past a certain threshold (e.g., 50px)
+    setIsSticky(window.scrollY > 50);
+  };
+
+  useEffect(() => {
+    // Add scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures that the effect runs only once
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false); // Close the menu on mobile after clicking a link
+    }
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className=" w-[90%] mx-auto">
+    <nav className={`w-[90%] mx-auto ${isSticky ? 'sticky top-0 bg-white shadow' : ''}`}>
       <div className="flex items-center justify-between">
         <div className="text-black font-bold text-xl">Omar</div>
         <div className="hidden md:flex space-x-4">
-          <a href='' className="text-black">Home</a>
-          <a href='' className="text-black">About</a>
-          <a href='' className="text-black">Skills</a>
-          <a href='' className="text-black">Project</a>
-          <a href='' className="text-black">Contact</a>
-
+          <button onClick={() => scrollToSection('home')} className="text-black">Home</button>
+          <button onClick={() => scrollToSection('about')} className="text-black">About</button>
+          <button onClick={() => scrollToSection('skills')} className="text-black">Skills</button>
+          <button onClick={() => scrollToSection('projects')} className="text-black">Project</button>
+          <button onClick={() => scrollToSection('contact')} className="text-black">Contact</button>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-black">
@@ -45,11 +68,11 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden mt-4">
-        <a href='' className="text-black">Home</a>
-        <a href='' className="text-black">About</a>
-        <a href='' className="text-black">Skills</a>
-        <a href='' className="text-black">Project</a>
-        <a href='' className="text-black">Contact</a>
+          <button onClick={() => scrollToSection('home')} className="text-black">Home</button>
+          <button onClick={() => scrollToSection('about')} className="text-black">About</button>
+          <button onClick={() => scrollToSection('skills')} className="text-black">Skills</button>
+          <button onClick={() => scrollToSection('projects')} className="text-black">Project</button>
+          <button onClick={() => scrollToSection('contact')} className="text-black">Contact</button>
         </div>
       )}
     </nav>
