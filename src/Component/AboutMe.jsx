@@ -22,7 +22,7 @@ const About = () => {
           technology to build responsive modern and dynamic website. <br />
           <br />
           On the front-end side, I am specialized in HTML, CSS, tailwind,
-          bootstrap, and JavaScript frameworks such as React. I can create user
+          bootstrap, and JavaScript libraries such as React. I can create user
           friendly web application <br /> <br />
           Moving the backend I specialize in backend web development using
           Node.js, Express.js, MongoDB, and Mongoose. This tech stack allows me
